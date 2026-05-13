@@ -8,42 +8,45 @@ The project was developed as part of CIS735 – Machine Learning for Security.
 
 The UNSW-NB15 dataset was selected because it contains modern network traffic and multiple attack categories, making it more realistic than older intrusion detection datasets such as KDD99.
 
----
+\---
 
 # Project Goals
 
-- Build a machine learning-based intrusion detection system
-- Compare multiple machine learning models
-- Evaluate model performance using standard classification metrics
-- Analyze feature importance and preprocessing techniques
-- Explore tradeoffs between accuracy and computational efficiency
+* Build a machine learning-based intrusion detection system
+* Compare multiple machine learning models
+* Evaluate model performance using standard classification metrics
+* Analyze feature importance and preprocessing techniques
+* Explore tradeoffs between accuracy and computational efficiency
 
----
+\---
 
 # Dataset
 
 Dataset Used:
-- UNSW-NB15 Dataset
+
+* UNSW-NB15 Dataset
 
 Dataset Source:
 https://research.unsw.edu.au/projects/unsw-nb15-dataset
 
----
+\---
 
 # Technologies Used
 
 ## Programming Language
-- Python
+
+* Python
 
 ## Libraries
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- scipy
 
----
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* scikit-learn
+* scipy
+
+\---
 
 # Machine Learning Models
 
@@ -55,33 +58,33 @@ The project compares multiple machine learning algorithms:
 4. Logistic Regression
 5. Deep Neural Networks (future implementation)
 
----
+\---
 
 # Data Preprocessing
 
 The preprocessing stage includes:
 
-- Handling missing values
-- Encoding categorical features
-- Feature normalization
-- Feature scaling
-- Train/test splitting
-- Removing duplicate records
+* Handling missing values
+* Encoding categorical features
+* Feature normalization
+* Feature scaling
+* Train/test splitting
+* Removing duplicate records
 
----
+\---
 
 # Model Evaluation Metrics
 
 The models are evaluated using:
 
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-- False Positive Rate
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+* False Positive Rate
 
----
+\---
 
 # Example Workflow
 
@@ -93,29 +96,32 @@ The models are evaluated using:
 6. Compare performance metrics
 7. Analyze results
 
----
+\---
 
 # Current Progress
 
 Completed:
-- Project topic selection
-- Dataset acquisition
-- Initial literature review
-- Experimental design planning
-- Distance function and statistical analysis assignments
+
+* Project topic selection
+* Dataset acquisition
+* Initial literature review
+* Experimental design planning
+* Distance function and statistical analysis assignments
 
 In Progress:
-- Dataset preprocessing
-- Feature engineering
-- Baseline model implementation
+
+* Dataset preprocessing
+* Feature engineering
+* Baseline model implementation
 
 Planned:
-- Deep learning implementation
-- Hyperparameter optimization
-- Explainable AI analysis
-- Final comparative evaluation
 
----
+* Deep learning implementation
+* Hyperparameter optimization
+* Explainable AI analysis
+* Final comparative evaluation
+
+\---
 
 # Research Motivation
 
@@ -123,42 +129,41 @@ Traditional signature-based intrusion detection systems often struggle to detect
 
 The goal of this project is to explore how different machine learning techniques perform on modern intrusion detection tasks using realistic network traffic data.
 
----
+\---
 
 # Future Improvements
 
 Future work may include:
 
-- Real-time intrusion detection
-- Deep learning architectures
-- Explainable AI (XAI)
-- Feature importance visualization
-- Cloud-based deployment
-- Streaming network analysis
+* Real-time intrusion detection
+* Deep learning architectures
+* Explainable AI (XAI)
+* Feature importance visualization
+* Cloud-based deployment
+* Streaming network analysis
 
----
+\---
 
 # References
 
 1. UNSW-NB15 Dataset
 https://research.unsw.edu.au/projects/unsw-nb15-dataset
-
-2. Moustafa, N., & Slay, J. (2015).
+2. Moustafa, N., \& Slay, J. (2015).
 UNSW-NB15: A Comprehensive Data Set for Network Intrusion Detection Systems.
-
 3. Scikit-learn Documentation
 https://scikit-learn.org/
 
----
+\---
 
 # Author
 
 Michael Preko Nkum
 
-GIS Developer | Machine Learning for Security Student
+Snr Software Developer | Machine Learning for Security
 
----
+\---
 
 # License
 
 This project is for educational and research purposes.
+
