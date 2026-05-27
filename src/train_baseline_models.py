@@ -6,8 +6,8 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.preprocessing import StandardScaler
 
 # Load datasets
-train_df = pd.read_csv("../data/UNSW_NB15_training-set.csv")
-test_df = pd.read_csv("../data/UNSW_NB15_testing-set.csv")
+train_df = pd.read_csv("data/UNSW_NB15_training-set.csv")
+test_df = pd.read_csv("data/UNSW_NB15_testing-set.csv")
 
 # Binary classification target
 y_train = train_df["label"]
