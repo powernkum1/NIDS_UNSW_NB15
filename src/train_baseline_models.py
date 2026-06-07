@@ -4,6 +4,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.preprocessing import StandardScaler
+from sklearn.svm import LinearSVC
+from sklearn.decomposition import PCA
 
 # Load datasets
 train_df = pd.read_csv("data/UNSW_NB15_training-set.csv")
@@ -65,3 +67,38 @@ rf_predictions = rf_model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, rf_predictions))
 print(classification_report(y_test, rf_predictions))
 print(confusion_matrix(y_test, rf_predictions))
+
+# -----------------------------
+# SVM Forest
+# -----------------------------
+
+print("\nSVM Results")
+
+svm_model = LinearSVC(random_state=42, max_iter=5000)
+svm_model.fit(X_train_scaled, y_train)
+
+svm_predictions = svm_model.predict(X_test_scaled)
+
+print("Accuracy:", accuracy_score(y_test, svm_predictions))
+print(classification_report(y_test, svm_predictions))
+print(confusion_matrix(y_test, svm_predictions))
+
+# -----------------------------
+# PCA
+# -----------------------------
+
+print("\nPCA + SVM Results")
+
+pca = PCA(n_components=20, random_state=42)
+
+X_train_pca = pca.fit_transform(X_train_scaled)
+X_test_pca = pca.transform(X_test_scaled)
+
+svm_pca_model = LinearSVC(random_state=42, max_iter=5000)
+svm_pca_model.fit(X_train_pca, y_train)
+
+svm_pca_predictions = svm_pca_model.predict(X_test_pca)
+
+print("Accuracy:", accuracy_score(y_test, svm_pca_predictions))
+print(classification_report(y_test, svm_pca_predictions))
+print(confusion_matrix(y_test, svm_pca_predictions))
