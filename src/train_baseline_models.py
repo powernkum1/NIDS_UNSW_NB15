@@ -102,3 +102,48 @@ svm_pca_predictions = svm_pca_model.predict(X_test_pca)
 print("Accuracy:", accuracy_score(y_test, svm_pca_predictions))
 print(classification_report(y_test, svm_pca_predictions))
 print(confusion_matrix(y_test, svm_pca_predictions))
+
+# ------------------------------------
+# Deep Neural Network
+# ------------------------------------
+
+print("\nDNN Results")
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.optimizers import Adam
+
+dnn_model = Sequential([
+    Dense(64, activation="relu", input_shape=(X_train_scaled.shape[1],)),
+    Dropout(0.2),
+
+    Dense(32, activation="relu"),
+    Dropout(0.2),
+
+    Dense(1, activation="sigmoid")
+])
+
+dnn_model.compile(
+    optimizer=Adam(learning_rate=0.001),
+    loss="binary_crossentropy",
+    metrics=["accuracy"]
+)
+
+dnn_model.fit(
+    X_train_scaled,
+    y_train,
+    epochs=10,
+    batch_size=256,
+    validation_split=0.2,
+    verbose=1
+)
+
+dnn_predictions_prob = dnn_model.predict(X_test_scaled)
+
+dnn_predictions = (
+    dnn_predictions_prob > 0.5
+).astype(int).flatten()
+
+print("Accuracy:", accuracy_score(y_test, dnn_predictions))
+print(classification_report(y_test, dnn_predictions))
+print(confusion_matrix(y_test, dnn_predictions))
