@@ -7,6 +7,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import LinearSVC
 from sklearn.decomposition import PCA
 
+from tensorflow.keras.models import Sequential
+
+print("TensorFlow loaded successfully")
+
 # Load datasets
 train_df = pd.read_csv("data/UNSW_NB15_training-set.csv")
 test_df = pd.read_csv("data/UNSW_NB15_testing-set.csv")
